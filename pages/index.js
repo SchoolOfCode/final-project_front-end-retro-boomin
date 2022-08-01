@@ -4,11 +4,19 @@ import Navbar from '../components/navbar';
 import Searchbar from '../components/searchbar';
 import RecCard from '../components/recCard.js';
 import { Box } from '@mui/material';
-import data from '../db/recipeData.js';
+// import data from '../db/recipeData.js';
 import CreateRecipeButton from '../components/createRecipeButton';
-
+import Link from 'next/link';
+import { useContext } from 'react';
+import { Context } from '../context/Context';
+import { ConstructionOutlined } from '@mui/icons-material';
 
 export default function Home() {
+  const dataC = useContext(Context);
+  console.log('dataC', dataC);
+
+  // console.log('fromHomePage', data);
+
   return (
     <Box id="mainBox">
       <Head>
@@ -18,7 +26,13 @@ export default function Home() {
       <main>
         <Searchbar />
         <Banners />
-        <RecCard data={data} />
+
+        <section className="homepageRecipeScroll-container">
+          {dataC.cardsData.map((item) => {
+            return <RecCard item={item} key={item.id} />;
+          })}
+        </section>
+
         <CreateRecipeButton text={'Create Recipe'} />
       </main>
     </Box>

@@ -210,3 +210,11 @@ textarea {
   display: flex;
   flex-direction: column;
 }
+
+/* HOMEPAGE RECIPIE SCROLL SECTION */
+.homepageRecipeScroll-container {
+  display: flex;
+  flex-direction: row;
+  /* max-width: 375px; */
+  /* overflow: scroll; */
+}
