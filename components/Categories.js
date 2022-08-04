@@ -12,32 +12,33 @@ const Categories = () => {
     <>
       <Container
         sx={{
-          marginTop: '24px',
+          marginTop: '48px',
           display: 'flex',
-          justifyContent: 'center',
-          // backgroundColor: 'red',
+          backgroundColor: '',
         }}
         maxWidth="lg"
       >
         {/* Using Box instead of grid because grid with spacing can cause overlapping issues. */}
         <Box
           display="flex"
+          justifyContent="space-between"
           sx={{
             overflowX: 'auto',
             // All the chips except for the last one
             '& > *:not(:last-child)': { marginRight: '16px' },
             // All the chips
-            '& > *': { border: 1, padding: '16px 16px', fontSize: '16px' },
+            '& > *': { border: 1, padding: '16px', fontSize: '16px' },
           }}
         >
           <Chip
-            label={<MenuIcon sx={{ color: 'white', mt: 0.5 }} />} //This is the filter button (change icon to be different from burger menu icon)
+            label={<MenuIcon sx={{ color: 'white', mt: 0.5 }} />} //This is the filter button (change icon to be different from burger menu icon!)
             variant="outlined"
             onClick={handleChip}
             sx={{
               backgroundColor: '#343A40',
             }}
           />
+          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
           <Chip label="Pizza" variant="outlined" onClick={handleChip} />
           <Chip label="Pizza" variant="outlined" onClick={handleChip} />
           <Chip label="Pizza" variant="outlined" onClick={handleChip} />

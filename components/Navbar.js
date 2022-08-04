@@ -87,7 +87,10 @@ export const Navbar = () => {
       </AppBar>
       {/* The search input is now visible below the Navbar when the screen is on small devices */}
       <Hidden mdUp>
-        <Input onChange={handleInputChange} sx={{ margin: '24px' }} />
+        <Input
+          onChange={handleInputChange}
+          sx={{ margin: '48px 24px 0 24px' }}
+        />
       </Hidden>
     </>
   );

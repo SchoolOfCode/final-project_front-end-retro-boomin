@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import { Navbar } from '../components/Navbar';
 import { Container } from '@mui/system';
 import Categories from '../components/Categories';
+import { Hero } from '../components/Hero';
 
 export default function Home() {
   return (
@@ -14,9 +15,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <Navbar />
-        <Categories />
+      <Navbar />
+
+      <Categories />
+      <div style={{ maxWidth: '812px', margin: '0 auto' }}>
+        <Hero />
       </div>
 
       {/* <Container maxWidth="lg">
