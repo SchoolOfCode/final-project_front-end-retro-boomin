@@ -23,7 +23,10 @@ export default function Home() {
         <Hero />
       </Box>
       <Container maxWidth="lg">
-        <Typography variant="h5" sx={{ fontWeight: '600', marginTop: '80px' }}>
+        <Typography
+          variant="h5"
+          sx={{ fontWeight: '600', marginTop: '80px', marginBottom: '16px' }}
+        >
           Top recipes
         </Typography>
       </Container>
