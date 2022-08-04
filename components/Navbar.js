@@ -19,12 +19,22 @@ import logo from '../public/logo.svg';
 export const Navbar = () => {
   const [el, setEl] = useState(null);
 
+  // this state captures the value from two inputs because the visibility of each input changes depending on viewport size
+  const [input, setInput] = useState(null);
+
   const openMenu = (event) => {
     setEl(event.currentTarget);
   };
+
+  // capturing input value
+  function handleInputChange(e) {
+    console.log('inputValue', e.target.value);
+    setInput(e.target.value);
+  }
+
   return (
     <>
-      <AppBar position="relative" sx={{ backgroundColor: '#FEFCFC' }}>
+      <AppBar position="relative" sx={{ backgroundColor: '#fff' }}>
         <Container maxWidth="lg">
           <Toolbar
             sx={{
@@ -49,12 +59,13 @@ export const Navbar = () => {
               </MenuItem>
             </Menu>
 
+            {/* On Medium screen sizes and below the search bar input is hidden: It needs to be positioned below the Navbar instead of being hidden */}
             <Hidden mdDown>
               <Box
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
-                  backgroundColor: 'white',
+                  backgroundColor: '#F7F7F7',
                   borderRadius: '100px',
                   py: 1,
                   px: 2,
@@ -67,11 +78,23 @@ export const Navbar = () => {
                 }}
               >
                 <SearchIcon sx={{ color: 'black' }} />
-                <input placeholder="Search Recipe" />
+                <input
+                  onChange={handleInputChange}
+                  placeholder="Search Recipe"
+                  style={{ backgroundColor: '#F7F7F7' }}
+                />
               </Box>
+            </Hidden>
 
+            <Hidden mdDown>
               <Box
-                sx={{ '& a': { marginLeft: '16px', textDecoration: 'none' } }}
+                sx={{
+                  '& a': {
+                    marginLeft: '16px',
+                    textDecoration: 'none',
+                    color: '#34393C',
+                  },
+                }}
               >
                 <Link href="/">Home</Link>
                 <Link href="/">About</Link>
@@ -83,6 +106,33 @@ export const Navbar = () => {
           </Toolbar>
         </Container>
       </AppBar>
+      {/* The search input is now visible below the Navbar when the screen is on small devices */}
+      <Hidden mdUp>
+        <Box
+          sx={{
+            margin: '24px',
+            display: 'flex',
+            alignItems: 'center',
+            backgroundColor: '#F7F7F7',
+            borderRadius: '100px',
+            py: 1,
+            px: 2,
+            '& input': {
+              border: 'none',
+              outline: 'none',
+              borderRadius: '100px',
+              fontSize: '1.2rem',
+            },
+          }}
+        >
+          <SearchIcon sx={{ color: 'black' }} />
+          <input
+            onChange={handleInputChange}
+            placeholder="Search Recipe"
+            style={{ backgroundColor: '#F7F7F7' }}
+          />
+        </Box>
+      </Hidden>
     </>
   );
 };
