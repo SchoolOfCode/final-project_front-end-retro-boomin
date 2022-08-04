@@ -15,6 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import Image from 'next/image';
 import logo from '../public/logo.svg';
+import Input from './Input';
 
 export const Navbar = () => {
   const [el, setEl] = useState(null);
@@ -35,13 +36,16 @@ export const Navbar = () => {
   return (
     <>
       <AppBar position="relative" sx={{ backgroundColor: '#fff' }}>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ backgroundColor: '#fff' }}>
           <Toolbar
             sx={{
               justifyContent: 'space-between',
             }}
           >
             <Image src={logo} width={194} height={30} />
+            <Hidden mdDown>
+              <Input onChange={handleInputChange} />
+            </Hidden>
             <Hidden mdUp>
               <MenuIcon onClick={openMenu} />
             </Hidden>
@@ -60,31 +64,6 @@ export const Navbar = () => {
             </Menu>
 
             {/* On Medium screen sizes and below the search bar input is hidden: It needs to be positioned below the Navbar instead of being hidden */}
-            <Hidden mdDown>
-              <Box
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  backgroundColor: '#F7F7F7',
-                  borderRadius: '100px',
-                  py: 1,
-                  px: 2,
-                  '& input': {
-                    border: 'none',
-                    outline: 'none',
-                    borderRadius: '100px',
-                    fontSize: '1.2rem',
-                  },
-                }}
-              >
-                <SearchIcon sx={{ color: 'black' }} />
-                <input
-                  onChange={handleInputChange}
-                  placeholder="Search Recipe"
-                  style={{ backgroundColor: '#F7F7F7' }}
-                />
-              </Box>
-            </Hidden>
 
             <Hidden mdDown>
               <Box
@@ -107,31 +86,9 @@ export const Navbar = () => {
         </Container>
       </AppBar>
       {/* The search input is now visible below the Navbar when the screen is on small devices */}
+      dfdfdfdjjkj
       <Hidden mdUp>
-        <Box
-          sx={{
-            margin: '24px',
-            display: 'flex',
-            alignItems: 'center',
-            backgroundColor: '#F7F7F7',
-            borderRadius: '100px',
-            py: 1,
-            px: 2,
-            '& input': {
-              border: 'none',
-              outline: 'none',
-              borderRadius: '100px',
-              fontSize: '1.2rem',
-            },
-          }}
-        >
-          <SearchIcon sx={{ color: 'black' }} />
-          <input
-            onChange={handleInputChange}
-            placeholder="Search Recipe"
-            style={{ backgroundColor: '#F7F7F7' }}
-          />
-        </Box>
+        <Input onChange={handleInputChange} sx={{ marginTop: '20px' }} />
       </Hidden>
     </>
   );
