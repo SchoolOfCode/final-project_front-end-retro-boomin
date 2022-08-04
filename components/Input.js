@@ -11,14 +11,14 @@ function Input({ onChange, sx }) {
           ...sx,
           display: 'flex',
           alignItems: 'center',
-          backgroundColor: '#F7F7F7',
+          backgroundColor: '#F7F7F7 ',
           borderRadius: '100px',
           py: 1,
           px: 2,
           '& input': {
             border: 'none',
             outline: 'none',
-            borderRadius: '100px',
+            borderRadius: '40px',
             fontSize: '1.2rem',
           },
         }}

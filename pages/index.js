@@ -14,10 +14,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <>
+      <div>
         <Navbar />
         <Categories />
-      </>
+      </div>
 
       {/* <Container maxWidth="lg">
         <main className={styles.main}>Hellooo</main>

@@ -21,7 +21,7 @@ export const Navbar = () => {
   const [el, setEl] = useState(null);
 
   // this state captures the value from two inputs because the visibility of each input changes depending on viewport size
-  const [input, setInput] = useState(null);
+  const [input, setInput] = useState('');
 
   const openMenu = (event) => {
     setEl(event.currentTarget);
@@ -86,9 +86,8 @@ export const Navbar = () => {
         </Container>
       </AppBar>
       {/* The search input is now visible below the Navbar when the screen is on small devices */}
-      dfdfdfdjjkj
       <Hidden mdUp>
-        <Input onChange={handleInputChange} sx={{ marginTop: '20px' }} />
+        <Input onChange={handleInputChange} sx={{ margin: '24px' }} />
       </Hidden>
     </>
   );
