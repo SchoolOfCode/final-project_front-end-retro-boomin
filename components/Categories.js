@@ -47,6 +47,11 @@ const Categories = () => {
           <Chip label="Pizza" variant="outlined" onClick={handleChip} />
           <Chip label="Pizza" variant="outlined" onClick={handleChip} />
           <Chip label="Pizza" variant="outlined" onClick={handleChip} />
+          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
+          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
+          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
+          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
+          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
         </Box>
       </Container>
     </>
