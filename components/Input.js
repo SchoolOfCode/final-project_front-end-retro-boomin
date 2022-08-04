@@ -27,7 +27,7 @@ function Input({ onChange, sx }) {
         <input
           onChange={onChange}
           placeholder="Search Recipe"
-          style={{ backgroundColor: '#F7F7F7' }}
+          style={{ backgroundColor: 'transparent' }}
         />
       </Box>
     </>
