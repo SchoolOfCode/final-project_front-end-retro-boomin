@@ -27,7 +27,7 @@ const Categories = () => {
             // All the chips except for the last one
             '& > *:not(:last-child)': { marginRight: '16px' },
             // All the chips
-            '& > *': { border: 1, padding: '16px', fontSize: '16px' },
+            '& > div': { border: 1, p: 2, fontSize: '16px' },
           }}
         >
           <Chip

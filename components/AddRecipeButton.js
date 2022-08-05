@@ -9,8 +9,7 @@ function AddRecipeButton(props) {
       size="large"
       startIcon={<AddIcon />}
       sx={{
-        marginTop: props.marginTop,
-        fontSize: props.fontSize,
+        ...props.sx,
         fontWeight: '600',
       }}
     >
