@@ -39,19 +39,14 @@ const Categories = () => {
             }}
           />
           <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
-          <Chip label="Pizza" variant="outlined" onClick={handleChip} />
+          <Chip label="Burgers" variant="outlined" onClick={handleChip} />
+          <Chip label="Chinese" variant="outlined" onClick={handleChip} />
+          <Chip label="Fried" variant="outlined" onClick={handleChip} />
+          <Chip label="BBQ" variant="outlined" onClick={handleChip} />
+          <Chip label="Dessert" variant="outlined" onClick={handleChip} />
+          <Chip label="Soda" variant="outlined" onClick={handleChip} />
+          <Chip label="Indian" variant="outlined" onClick={handleChip} />
+          <Chip label="Greasy" variant="outlined" onClick={handleChip} />
         </Box>
       </Container>
     </>

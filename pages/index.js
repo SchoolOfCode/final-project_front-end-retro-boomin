@@ -20,7 +20,7 @@ export default function Home() {
       <Box
         sx={{
           boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;',
-          paddingBottom: '32px',
+          paddingBottom: '48px',
         }}
       >
         <Navbar />
@@ -40,6 +40,16 @@ export default function Home() {
       </Container>
       <Box>
         <Cards />
+      </Box>
+      <Container maxWidth="lg">
+        <Typography
+          variant="h5"
+          sx={{ fontWeight: '600', marginTop: '80px', marginBottom: '16px' }}
+        >
+          Newest recipes
+        </Typography>
+      </Container>
+      <Box>
         <Cards />
       </Box>
       <Hidden smUp>
@@ -61,9 +71,6 @@ export default function Home() {
           />
         </Container>
       </Hidden>
-      {/* <Container maxWidth="lg">
-        <main className={styles.main}>Hellooo</main>
-      </Container> */}
     </div>
   );
 }

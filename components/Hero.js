@@ -36,7 +36,9 @@ export const Hero = () => {
             >
               Choose and create healthy alternatives to fast food!
             </Typography>
-            <AddRecipeButton sx={{ marginTop: '16px', fontSize: '20px' }} />
+            <Hidden smDown>
+              <AddRecipeButton sx={{ marginTop: '24px', fontSize: '20px' }} />
+            </Hidden>
           </Grid>
 
           <Grid item md={5} xs={4}>
@@ -51,7 +53,6 @@ export const Hero = () => {
             />
           </Grid>
         </Grid>
-        <Hidden smDown></Hidden>
       </Container>
     </Box>
   );

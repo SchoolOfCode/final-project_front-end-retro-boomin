@@ -14,9 +14,11 @@ const Cards = () => {
           display: 'flex',
           '& > *': {
             minWidth: '250px',
+            borderRadius: '12px',
             '&:not(:last-child)': { marginRight: '24px' },
           },
           overflowX: 'auto',
+          padding: '20px',
         }}
       >
         <Paper sx={{ overflow: 'hidden' }}>
