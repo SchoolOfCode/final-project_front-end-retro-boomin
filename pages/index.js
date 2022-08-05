@@ -58,10 +58,12 @@ export default function Home() {
           zIndex="100"
           sx={{
             position: 'fixed',
-            bottom: '16px',
+            bottom: '0px',
             left: '50%',
             transform: 'translateX(-50%)',
             backgroundColor: '#fff',
+            zIndex: '200',
+            paddingBottom: '24px',
           }}
         >
           <AddRecipeButton
