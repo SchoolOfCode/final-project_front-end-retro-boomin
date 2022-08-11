@@ -23,11 +23,11 @@ import { useState, useEffect } from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AddIcon from '@mui/icons-material/Add';
 import { useUser } from '@auth0/nextjs-auth0';
-
 import { Alert, Dialog } from '@mui/material';
 
 export default function RecipeCards({ recipedata, separatedingredients }) {
   const [value, setValue] = useState(0);
+  const [open, setOpen] = useState(false);
   const { user } = useUser();
   async function handleClick(id) {
     try {
@@ -45,6 +45,15 @@ export default function RecipeCards({ recipedata, separatedingredients }) {
       console.log(error.message);
     }
   }
+
+  const addIngredientToShoppingList = (e) => {
+    getChipInfo(e);
+    setOpen(true);
+    setInterval(() => {
+      setOpen(false);
+    }, 1250);
+  };
+
   const getChipInfo = async (e) => {
     // console.info(e.currentTarget.innerText);
     const response = await fetch('https://craveaway.herokuapp.com/shop/list', {
@@ -58,12 +67,10 @@ export default function RecipeCards({ recipedata, separatedingredients }) {
       },
     });
     const data = await response.json();
-    alert('This ingredient has been added to your shopping list!');
     console.log(data);
   };
   const handleDelete = async (e) => {
-        alert('This ingredient has been added to your shopping list!');
-        console.log('sure thing');
+    console.log('sure thing');
   };
   return (
     <Container
@@ -277,10 +284,17 @@ export default function RecipeCards({ recipedata, separatedingredients }) {
                     borderRadius: '40px',
                     fontSize: '14px',
                   }}
-                  onClick={getChipInfo}
+                  onClick={addIngredientToShoppingList}
                   deleteIcon={<AddIcon />}
-                  onDelete={handleDelete}  
+                  onDelete={handleDelete}
                 ></Chip>
+                <Dialog
+                  open={open}
+                  fullScreen={false}
+                  BackdropProps={{ invisible: true }}
+                >
+                  <Alert>Ingredient added to your Shopping List </Alert>
+                </Dialog>
               </Grid>
             ))}
           </Grid>
