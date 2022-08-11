@@ -5,8 +5,6 @@
 describe('The Home Page', () => {
   it('visits site', () => {
     cy.visit('https://craveaway.vercel.app/');
-  });
-  it('clicks the hamburger menu', () => {
     cy.get('.burger-menu').click();
   });
   // it('clicks the +Create recipe button', () => {
@@ -35,19 +33,19 @@ it('visits site', () => {
   });
   
   describe('Submits a recipe', () => {
-  it('logs in through auth0', () => {
-      cy.visit('https://craveaway.vercel.app/')
-      cy.get('.burger-menu').click()
-      cy.get('.mui-style-p4gg3y > :nth-child(1) > .MuiButtonBase-root > .MuiListItemText-root > .MuiListItemText-primary > .MuiTypography-root').click();
-      
-      cy.origin("https://dev-659k2jkc.us.auth0.com/", () => {
-          cy.get("#username").type(Cypress.env("USERNAME"));
-          cy.get("#password").type(Cypress.env("PASSWORD"));
-          cy.contains("Continue").click();
-          });
+    it('logs in through auth0', () => {
+        cy.visit('https://craveaway.vercel.app/')
+        cy.get('.burger-menu').click()
+        cy.get('.mui-style-p4gg3y > :nth-child(1) > .MuiButtonBase-root > .MuiListItemText-root > .MuiListItemText-primary > .MuiTypography-root').click();
+        
+        cy.origin("https://dev-eotu3qte.us.auth0.com/", () => {
+            cy.get("#email").type(Cypress.env("USERNAME"));
+            cy.get("#password").type(Cypress.env("PASSWORD"));
+            // cy.contains('Log In').click(); can do this or:
+            cy.get("#btn-login").click();
+            });
+      });
+    
+      //once auth0 test works, should fill out each input field in createrecipe and submit
+    
     });
-  
-    //once auth0 test works, should fill out each input field in createrecipe and submit
-  
-  });
-  
