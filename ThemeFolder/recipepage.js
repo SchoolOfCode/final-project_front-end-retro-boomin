@@ -45,13 +45,14 @@ export default function RecipeCards({ recipedata, separatedingredients }) {
       console.log(error.message);
     }
   }
-
+  var timeout;
   const addIngredientToShoppingList = (e) => {
     getChipInfo(e);
     setOpen(true);
-    setInterval(() => {
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
       setOpen(false);
-    }, 1250);
+    }, 2000);
   };
 
   const getChipInfo = async (e) => {

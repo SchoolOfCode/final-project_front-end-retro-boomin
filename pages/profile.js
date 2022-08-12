@@ -38,7 +38,7 @@ export default function Profile() {
     }
     async function fetchFavCards() {
       const response = await fetch(
-        `http://localhost:3001/fav?userName=${user.name}`
+        `https://craveaway.herokuapp.com/fav?username=${user.name}`
       );
       const data = await response.json();
       const { payload } = data;

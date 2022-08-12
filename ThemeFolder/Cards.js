@@ -24,7 +24,7 @@ const Cards = ({ item }) => {
     const favCardInfo = array.map((object) => {
       return { ...object, userName: `${user.name}` };
     });
-    const response = await fetch('http://localhost:3001/fav/create/', {
+    const response = await fetch('https://craveaway.herokuapp.com/fav/create/', {
       method: 'POST',
       body: JSON.stringify(favCardInfo[0]),
       headers: {
