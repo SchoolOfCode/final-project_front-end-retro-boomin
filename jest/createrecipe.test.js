@@ -1,5 +1,6 @@
-import { render, screen } from '@testing-library/react'
-import Home from '../pages/index'
+import { screen } from '@testing-library/react';
+import { render } from './test-utils';
+import createRecipe from '../pages/createrecipe'
 import '@testing-library/jest-dom'
 
 describe('createrecipe', () => {
