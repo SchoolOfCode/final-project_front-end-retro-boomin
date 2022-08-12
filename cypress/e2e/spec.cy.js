@@ -74,10 +74,12 @@ describe('Clicking on an ingredient adds it onto the shopping list in profile', 
 
   cy.get(':nth-child(1) > .MuiPaper-root > .mui-style-19midj6').click();
   cy.url().should('include', 'post');
-
-
-  })
-  // it('adds ingredient', () => {
+  cy.get(':nth-child(1) > .MuiButtonBase-root > .MuiChip-label').click();
+  cy.get('.MuiToolbar-root > :nth-child(2) > svg').click();
+  cy.get(':nth-child(2) > .MuiButtonBase-root > .MuiListItemText-root > .MuiListItemText-primary > .MuiTypography-root').click();
+  cy.get(':nth-child(1) > .MuiButtonBase-root > .MuiChip-label').contains("beef");
+  })})
+  // it('', () => {
   //   cy.visit('https://craveaway.vercel.app/post/1');
   //   cy.get(':nth-child(1) > .MuiButtonBase-root > [data-testid="AddIcon"] > path').click();
   //   cy.get('.burger-menu').click();
@@ -93,7 +95,4 @@ describe('Clicking on an ingredient adds it onto the shopping list in profile', 
   //   cy.url().should('include', 'craveaway');
 
 
-  })
-
-
-
+  // })

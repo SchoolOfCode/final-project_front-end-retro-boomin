@@ -262,6 +262,7 @@ export default function RecipeCards({ recipedata, separatedingredients }) {
             {separatedingredients.map((item) => (
               <Grid item xs={6} sm={4}>
                 <Chip
+                 
                   label={item}
                   variant="outlined"
                   sx={{
