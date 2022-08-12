@@ -93,10 +93,10 @@ export default function Home({ payload }) {
             fontWeight: '600',
           }}
         >
-          Featured recipes
+          Featured Recipes
         </Typography>
-        <Typography
-          sx={{ cursor: 'pointer', fontWeight: '600'  }}
+        <Typography variant="h6"
+          sx={{ cursor: 'pointer', color: "#FCC62E", fontWeight: '600'  }}
           onClick={() => {
             getAllRecipes();
           }}
@@ -117,11 +117,13 @@ export default function Home({ payload }) {
               },
               gridTemplateColumns: {
                 sm: 'repeat(auto-fill, minmax(250px, 1fr))',
+                
               },
               '& > div': {
                 marginBottom: '24px',
                 minWidth: '250px',
                 borderRadius: '16px',
+                cursor: 'pointer',
               },
               overflowX: 'auto',
             }}
