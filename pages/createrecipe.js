@@ -76,7 +76,7 @@ export default function createRecipe() {
   };
   const handleClick = async (x) => {
     const response = await fetch(
-      'http://craveaway.herokuapp.com/recipes/create/',
+      'https://craveaway.herokuapp.com/recipes/create/',
       {
         method: 'POST',
         body: JSON.stringify(newRecipeSubmission),
@@ -224,6 +224,7 @@ export default function createRecipe() {
                 <Grid item sm={6} xs={12}>
                   <Typography sx={{ mb: 1, mt: 2 }}>Cooking Time: </Typography>
                   <Select
+                    id="timeInput"
                     sx={{
                       height: '50px',
                       borderRadius: '8px',

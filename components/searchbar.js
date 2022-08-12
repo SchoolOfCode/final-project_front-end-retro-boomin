@@ -17,7 +17,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 export async function getServerSideProps() {
   try {
     const response = await fetch(
-      `http://craveaway.herokuapp.com/recipes?search=$`
+      `https://craveaway.herokuapp.com/recipes?search=$`
     );
     const data = await response.json();
     const { payload } = data;
