@@ -205,7 +205,7 @@ export default function createRecipe() {
                 </Typography>
               </Box>
               <Button
-                variant="contained"
+                variant="outlined"
                 component="label"
                 sx={{
                   marginTop: '8px',
@@ -405,73 +405,47 @@ export default function createRecipe() {
   } else {
     return (
       <>
-        <div>
-          <Navbar />
-          <Box
-            sx={{
-              backgroundImage: 'url(/food_illustration.png)',
-              minHeight: '100vh',
-              paddingBottom: {
-                xs: '0',
-                sm: '40px',
-                md: '40px',
-              },
-            }}
-          >
-            <br></br>
-            <br></br>
-            <Box
+        <Navbar />
+
+        <Box
+          sx={{
+            backgroundImage: 'url(/food_illustration.png)',
+            minHeight: '100vh',
+            paddingBottom: {
+              xs: '0',
+              sm: '40px',
+              md: '40px',
+            },
+          }}
+        >
+          <Container maxWidth="xs" position="relative">
+            <Paper
               sx={{
-                borderRadius: 7,
-                backgroundColor: 'white',
-                paddingBottom: 8,
-                alignItems: 'center',
+                padding: '40px 32px',
                 display: 'flex',
-                justifyContent: 'center',
-                width: 300,
-                height: 10,
-                m: 'auto',
+                flexDirection: 'column',
+
+                alignItems: 'center',
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                borderRadius: '16px',
               }}
             >
-              <Typography
-                font-align="center"
-                sx={{
-                  fontWeight: '800',
-                  fontSize: 15,
-                  paddingTop: 2,
-                  paddingBottom: 4,
-                  textAlign: 'center',
-                  m: 'auto',
-                  alignItems: 'center',
-                  display: 'flex',
-                  justifyContent: 'center',
-                }}
-              >
+              <Typography variant="h6" sx={{ textAlign: 'center' }}>
                 You must login to create a recipe!
               </Typography>
-            </Box>
-            <>
-              <Box
-                sx={{
-                  backgroundColor: 'white',
-                  borderRadius: 1000,
-                  display: 'flex',
-                  width: '33%',
-                  m: 'auto',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <img
-                  alt="Loading..."
-                  className="fryingpan"
-                  margin="auto"
-                  width="400"
-                  height="250"
-                  data-id="14475354"
-                  data-animated-url="https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif"
-                  skip_resize="false"
-                  srcset="https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif 320w,
+
+              <img
+                alt="Loading..."
+                className="fryingpan"
+                width="220"
+                height="220"
+                data-id="14475354"
+                data-animated-url="https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif"
+                skip_resize="false"
+                srcset="https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif 320w,
   https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif 400w,
   https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif 450w,
   https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif 640w,
@@ -482,43 +456,26 @@ export default function createRecipe() {
   https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif 1200w,
   https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif 768w,
   https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif 1600w"
-                  sizes="(max-width: 919px) 100vw, max(768px, 98vh)"
-                  src="https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif"
-                ></img>
-              </Box>
-            </>
-            <Box
-              sx={{
-                backgroundColor: 'white',
-                borderRadius: 10,
-                paddingBottom: 3,
-                paddingTop: 3,
-                alignItems: 'center',
-                display: 'flex',
-                justifyContent: 'center',
-                width: '18%',
-                m: 'auto',
-              }}
-            >
+                sizes="(max-width: 919px) 100vw, max(768px, 98vh)"
+                src="https://cdn.dribbble.com/users/393062/screenshots/14475354/media/f2221ff5ea31cd694fea71f05a28805c.gif"
+              />
+
               <Link href="/api/auth/login" passHref>
                 <Button
                   variant="contained"
+                  size="large"
                   className="fixedLoginButton"
                   sx={{
-                    fontWeight: '900',
-                    marginTop: 15,
-                    alignItems: 'center',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    m: 'auto',
+                    fontWeight: '600',
+                    marginTop: '32px',
                   }}
                 >
                   Login
                 </Button>
               </Link>
-            </Box>
-          </Box>
-        </div>
+            </Paper>
+          </Container>
+        </Box>
       </>
     );
   }

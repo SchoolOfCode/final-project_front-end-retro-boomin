@@ -18,6 +18,7 @@ import Link from 'next/link';
 import { useUser } from '@auth0/nextjs-auth0';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import Typography from '@mui/material/Typography';
+
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = React.useState({
     top: false,
