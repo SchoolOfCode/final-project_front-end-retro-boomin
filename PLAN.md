@@ -143,3 +143,4 @@ When you click the chip "all" in the Categories Component we want to populate th
 
 - the filter is working so now the state needs to be updated to reflect the changes in the UI
 - call setFilter (which is showing the current payload as state - so all the recipes) in the filterCategoryRecipe function and give it the new recipes array that was the result of the filter ✅
+- click search icon to go back to default state of all recipes ✅
