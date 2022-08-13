@@ -138,3 +138,8 @@ When you click the chip "all" in the Categories Component we want to populate th
 - in the filterRecipe function call the received function and pass in the name of the category ✅
 - now that filterCategoryRecipe is being received in Category Component the filterRecipe function is not required onClick and the filterCategoryRecipe can be called onClick and pass the name directly into it to be run on index.js ✅
 - now whenever a chip is clicked filterCategoryRecipe(name) function is called and the category name clicked on filters the result on the homepage ✅
+
+#### phase 4
+
+- the filter is working so now the state needs to be updated to reflect the changes in the UI
+- call setFilter (which is showing the current payload as state - so all the recipes) in the filterCategoryRecipe function and give it the new recipes array that was the result of the filter ✅

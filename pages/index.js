@@ -49,6 +49,7 @@ export default function Home({ payload }) {
   const filterCategoryRecipe = (name) => {
     const newRecipes = payload.filter((recipe) => recipe.category === name);
     console.log(newRecipes);
+    setFiltered(newRecipes);
   };
   return (
     <div>
