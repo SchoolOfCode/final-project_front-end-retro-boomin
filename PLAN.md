@@ -116,9 +116,25 @@ When you click the chip "all" in the Categories Component we want to populate th
 
 #### phase 2
 
-- now that each category has a name, when we click on a category we should filter the recipes
-- create a function const filterRecipes
-- console log the name of the category clicked on to make sure we are getting it
-- add onClick to the Chip Component returned, call the filterRecipes function and pass in the name and receive in the function as argument
-- deconstruct the mapped object into name and emojivariables
-- change the labels on the chips to reflect the deconstruction
+- now that each category has a name, when we click on a category we should filter the recipes ✅
+- create a function const filterRecipes ✅
+- console log the name of the category clicked on to make sure we are getting it ✅
+- add onClick to the Chip Component returned, call the filterRecipes function and pass in the name and receive in the function as argument ✅
+- deconstruct the mapped object into name and emojivariables ✅
+- change the labels on the chips to reflect the deconstruction with variable name ✅
+
+#### phase 3
+
+- to filter the recipes use the same functionality from the search input on the homepage: type something and filter the results ✅
+- the recipes data is on the homepage so we neec to create a function and pass it to the Categories component as a prop to call it in there ✅
+- payload is the data ✅
+- call the .filter(method) on it to produce a recipe ✅
+- receive the name of the category (which will be sent from executing the function in Categories Component) ✅
+- return all recipes objects who category matches the name received which will be sent as a prop: recipe.catgory === name ✅
+- save to new variable ✅
+- console.log the variable to check if filter is working ✅
+- pass the function to the Categories Component rendered on the homepage as a prop ✅
+- receive the prop in Categories Component and destructure it ✅
+- in the filterRecipe function call the received function and pass in the name of the category ✅
+- now that filterCategoryRecipe is being received in Category Component the filterRecipe function is not required onClick and the filterCategoryRecipe can be called onClick and pass the name directly into it to be run on index.js ✅
+- now whenever a chip is clicked filterCategoryRecipe(name) function is called and the category name clicked on filters the result on the homepage ✅

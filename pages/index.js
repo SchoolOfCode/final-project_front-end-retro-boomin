@@ -45,6 +45,11 @@ export default function Home({ payload }) {
     setFiltered(filter);
     console.log(filtered);
   }
+
+  const filterCategoryRecipe = (name) => {
+    const newRecipes = payload.filter((recipe) => recipe.category === name);
+    console.log(newRecipes);
+  };
   return (
     <div>
       <Head>
@@ -73,7 +78,7 @@ export default function Home({ payload }) {
         </Hidden>
       </Box>
       {/* </Box> */}
-      <Categories />
+      <Categories filterCategoryRecipe={filterCategoryRecipe} />
       <Hidden smUp>
         <Container maxWidth="lg">
           <MobileHero />
