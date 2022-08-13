@@ -433,7 +433,10 @@ export default function createRecipe() {
                 borderRadius: '16px',
               }}
             >
-              <Typography variant="h6" sx={{ textAlign: 'center' }}>
+              <Typography
+                variant="h6"
+                sx={{ textAlign: 'center', fontWeight: '600' }}
+              >
                 You must login to create a recipe!
               </Typography>
 
