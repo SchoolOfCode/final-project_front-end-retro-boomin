@@ -46,8 +46,8 @@ export default function SwipeableTemporaryDrawer() {
     >
       <List
         sx={{
-          backgroundColor: '#F4CE5E',
-          color: 'black',
+          backgroundColor: '#FCC62E',
+          color: '#34393C',
         }}
       >
         {[
@@ -67,7 +67,7 @@ export default function SwipeableTemporaryDrawer() {
                 {index === 0 && (
                   <HomeIcon
                     sx={{
-                      color: 'black',
+                      color: '#34393C',
                       fontSize: 'xx-large',
                     }}
                   />
@@ -75,7 +75,7 @@ export default function SwipeableTemporaryDrawer() {
                 {index === 1 && (
                   <AccountCircleIcon
                     sx={{
-                      color: 'black',
+                      color: '#34393C',
                       fontSize: 'xx-large',
                     }}
                   />
@@ -83,7 +83,7 @@ export default function SwipeableTemporaryDrawer() {
                 {index === 2 && (
                   <DinnerDiningIcon
                     sx={{
-                      color: 'black',
+                      color: '#34393C',
                       fontSize: 'xx-large',
                     }}
                   />
@@ -97,8 +97,8 @@ export default function SwipeableTemporaryDrawer() {
       <Divider />
       <List
         sx={{
-          background: '#F4CE5E',
-          color: 'black',
+          background: '#FCC62E',
+          color: '#34393C',
         }}
       >
         {[
@@ -116,7 +116,7 @@ export default function SwipeableTemporaryDrawer() {
                 {index === 0 && (
                   <Login
                     sx={{
-                      color: 'black',
+                      color: '#34393C',
                       fontSize: 'xx-large',
                     }}
                   />
@@ -124,7 +124,7 @@ export default function SwipeableTemporaryDrawer() {
                 {index === 1 && (
                   <PolicyIcon
                     sx={{
-                      color: 'black',
+                      color: '#34393C',
                       fontSize: 'xx-large',
                     }}
                   />
@@ -132,7 +132,7 @@ export default function SwipeableTemporaryDrawer() {
                 {index === 2 && (
                   <PersonAddIcon
                     sx={{
-                      color: 'black',
+                      color: '#34393C',
                       fontSize: 'xx-large',
                     }}
                   />
@@ -154,8 +154,8 @@ export default function SwipeableTemporaryDrawer() {
     >
       <List
         sx={{
-          background: '#F4CE5E',
-          color: 'black',
+          background: '#FCC62E',
+          color: '#34393C',
         }}
       >
         {[
@@ -175,7 +175,7 @@ export default function SwipeableTemporaryDrawer() {
                 {index === 0 && (
                   <HomeIcon
                     sx={{
-                      color: 'black',
+                      color: '#34393C',
                       fontSize: 'xx-large',
                     }}
                   />
@@ -183,7 +183,7 @@ export default function SwipeableTemporaryDrawer() {
                 {index === 1 && (
                   <AccountCircleIcon
                     sx={{
-                      color: 'black',
+                      color: '#34393C',
                       fontSize: 'xx-large',
                     }}
                   />
@@ -191,7 +191,7 @@ export default function SwipeableTemporaryDrawer() {
                 {index === 2 && (
                   <DinnerDiningIcon
                     sx={{
-                      color: 'black',
+                      color: '#34393C',
                       fontSize: 'xx-large',
                     }}
                   />
@@ -205,8 +205,8 @@ export default function SwipeableTemporaryDrawer() {
       <Divider />
       <List
         sx={{
-          background: '#F4CE5E',
-          color: 'black',
+          background: '#FCC62E',
+          color: '#34393C',
         }}
       >
         {[
@@ -253,7 +253,7 @@ export default function SwipeableTemporaryDrawer() {
             <HiMenu
               cursor="pointer"
               fontSize="32px"
-              color="#343A40"
+              color="#34393C"
               onClick={toggleDrawer(anchor, true)}
               style={{ marginTop: '6px' }}
             />
