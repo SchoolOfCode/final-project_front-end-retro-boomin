@@ -252,8 +252,9 @@ export default function SwipeableTemporaryDrawer() {
             <HiMenu
               cursor="pointer"
               fontSize="32px"
-              color="#34393C"
+              color="#343A40"
               onClick={toggleDrawer(anchor, true)}
+              style={{ marginTop: '6px' }}
             />
 
             <SwipeableDrawer

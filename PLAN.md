@@ -78,4 +78,5 @@ When you click the chip "all" in the Categories Component we want to populate th
 - add cursor: 'pointer' to clickable area of recipe cards ✅
 - change description on recipepage to: Instructions / Method ✅
 - if card is in a users profile fav icon should be filled not outlined / or get rid of fav icon ❌
-- change upload image button to under the image upload area on create recipe page
+- change upload image button to under the image upload area on create recipe page ✅
+- place hamburger menu icon central to the navbar ✅
