@@ -105,7 +105,7 @@ export default function Home({ payload }) {
             getAllRecipes();
           }}
         >
-          All Recipes
+          View all
         </Typography>
       </Container>
       <Box>

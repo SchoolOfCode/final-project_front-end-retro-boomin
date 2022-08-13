@@ -80,3 +80,12 @@ When you click the chip "all" in the Categories Component we want to populate th
 - if card is in a users profile fav icon should be filled not outlined / or get rid of fav icon ❌
 - change upload image button to under the image upload area on create recipe page ✅
 - place hamburger menu icon central to the navbar ✅
+- style navbar draw with brand guidelines
+- change all recipes button to view all
+
+functionality:
+
+- all recipes button does not get all recipes
+  - when all recipies button is clicked the title should change on "featured recipes" to "all recipes" and visa versa so that the user can go back and forth
+- when search input is used, if there are result then display the results, if no results then display there are no search results for that search
+-
