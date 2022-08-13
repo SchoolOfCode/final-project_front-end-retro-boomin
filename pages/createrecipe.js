@@ -150,10 +150,6 @@ export default function createRecipe() {
               marginTop: '40px',
               padding: '24px 24px 24px 24px',
               borderRadius: '8px',
-
-              // '& label': {
-              //   opacity: '55%',
-              // },
             }}
           >
             <Box>
@@ -431,6 +427,7 @@ export default function createRecipe() {
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 borderRadius: '16px',
+                backgroundColor: '#fdfdfd',
               }}
             >
               <Typography
