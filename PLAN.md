@@ -5,18 +5,18 @@
 - styling navbar draw
 - alignment of cards on profile page ✅
 - alignment of shopping list chips on profile page
-- add plus button to recipepage ingredients that can add items to shoppingList on user profile ❌ requires backend table ❌
+- add plus button to recipepage ingredients that can add items to shoppingList on user profile ❌ requires backend table ❌ !!UPDATE: this is now done on click by raffa and Ivon. ✅
 - resizing image on dev2 branch for cards and for recipepage when card is clicked on ✅
-- delete input from navbar on everypage except for homepage: How? ❌
+- delete input from navbar on everypage except for homepage: How? Used useRouter and called it with router = useRouter(), then accessed the objects path router.path which should be "/" for home page, then used a ternary to say if the router.path !== "/" then dont show the Navbar Component ✅
 
 ---
 
 ### tuesday 9th august
 
 - change +create recipe button and submit recipe button on all instances:
-  - AddRecipeButton component
-    - Hero component: Up & Down
-  - create recipe page
+  - AddRecipeButton component ✅
+    - Hero component: Up & Down ✅
+  - create recipe page ✅
   - to have rounded border-radius at least 50% of the height of the element. This is to be consistent with the tone of voice of the app: welcoming, appetising and quality and all other elements have rounded corners. ✅
 
 ### Homepage
@@ -25,7 +25,7 @@
 
 ### Create recipe page
 
-- see if an icon or illustration looks better before the page title inline with the title (something food related to add approachability)
+- see if an icon or illustration looks better before the page title inline with the title (something food related to add approachability) ❌
 
 ### Recipe page
 
@@ -35,15 +35,15 @@
 - see the Creator on a seperate line from the icon and author name ✅
 - space the icon strip centrally ✅
 - size the icons and the text to be slightly larger ✅
-- make sure ingredients are contained within the width of the box and they wrap to a new line no matter how many ingredients added
-- see if an icon or illustration looks better before the page title inline with the title (something food related to add approachability)
-- position the image centrally and to the top
+- make sure ingredients are contained within the width of the box and they wrap to a new line no matter how many ingredients added ✅
+- see if an icon or illustration looks better before the page title inline with the title (something food related to add approachability) ❌
+- position the image centrally and to the top ✅
 
 ### User profile page
 
-- add navbar to user profile page
-- consult figma design for layout
-- copy and paste code over from style branch for whole page to see if it fits
+- add navbar to user profile page ✅
+- consult figma design for layout ✅
+- copy and paste code over from style branch for whole page to see if it fits ✅
 
 <!-- limit top recipes to 12 and add show all recipes button
 1. array method - slice first 12 top recipes array (payload)
@@ -59,11 +59,11 @@ const [limit, setLimit] = useState(12);
 
 ---
 
-When you click the chip "all" in the Categories Component we want to populate the cards area in Cards Component with all of the cards from the data
+When you click the chip "all" in the Categories Component we want to populate the cards area in Cards Component with all of the cards from the data ❌ !!! UPDATE: The View all button on homepage will perform this functionality
 
-- we need to clear the current set of cards and render the new set of cards
+- we need to clear the current set of cards and render the new set of cards ❌
 
-- we also need to change the 'Top recipes' headline to 'All recipes'
+- we also need to change the 'Top recipes' headline to 'All recipes' ❌
 
 ++
 
@@ -71,7 +71,7 @@ When you click the chip "all" in the Categories Component we want to populate th
 - fix image on mobile screen size mobile hero (ask team what they think it looks like)
 - place the all button on mobile ✅
 - make the opacity of the required lighter ✅
-- align nav hamburger menu icon to left (use material icon for it to get rid of the misalignment)
+- align nav hamburger menu icon to left (use material icon for it to get rid of the misalignment) ✅
 
 ### sat 13th august
 
@@ -86,10 +86,10 @@ When you click the chip "all" in the Categories Component we want to populate th
 ### functionality:
 
 - all recipes button does not get all recipes
-  - when all recipies button is clicked the title should change on "featured recipes" to "all recipes" and visa versa so that the user can go back and forth
-- when search input is used, if there are result then display the results, if no results then display there are no search results for that search
-- create recipe does not submit to anywhere
-- if a user searches an there is no result then the page should tell the user no result are found and also redirect to a populated version of the page with featured recipes after a few seconds
+  - when all recipies button is clicked the title should change on "featured recipes" to "all recipes" and visa versa so that the user can go back and forth ❌
+- when search input is used, if there are result then display the results, if no results then display there are no search results for that search ❌
+- create recipe does not submit to anywhere ❌ !!! UPDATE: apparently this works but not if the image is over 10kb!!!!!!!! ❌
+- if a user searches an there is no result then the page should tell the user no result are found and also redirect to a populated version of the page with featured recipes after a few seconds ❌
 
 - ### Get Chips on homepage working
 
