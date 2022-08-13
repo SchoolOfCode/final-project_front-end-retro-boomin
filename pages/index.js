@@ -17,17 +17,20 @@ import MobileHero from '../components/MobileHero';
 // This function will pre-render the home page on each request using the data returned by getServerSideProps. - In this case "payload" which is the recipe card's content.
 export async function getServerSideProps() {
   try {
-    const response = await fetch(`http://craveaway.herokuapp.com/recipes`);
+    // const response = await fetch(`http://craveaway.herokuapp.com/recipes`);
+    const response = await fetch(`http://localhost:3000/data.json`);
     const data = await response.json();
     const { payload } = data;
     const avg = data.average;
-    return { props: { payload } };
+    // return { props: { payload } }
+    return { props: { payload: data } };
   } catch (error) {
     console.log(error.message);
   }
 }
 
 export default function Home({ payload }) {
+  console.log(payload);
   const [search, setSearch] = useState('');
   const [filtered, setFiltered] = useState(payload);
 
@@ -102,7 +105,7 @@ export default function Home({ payload }) {
         <Typography
           sx={{ cursor: 'pointer', fontWeight: '600' }}
           onClick={() => {
-            getAllRecipes();
+            setFiltered();
           }}
         >
           View all

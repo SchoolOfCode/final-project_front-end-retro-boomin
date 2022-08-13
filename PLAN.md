@@ -11,7 +11,7 @@
 
 ---
 
-tuesday 9th august
+### tuesday 9th august
 
 - change +create recipe button and submit recipe button on all instances:
   - AddRecipeButton component
@@ -19,15 +19,15 @@ tuesday 9th august
   - create recipe page
   - to have rounded border-radius at least 50% of the height of the element. This is to be consistent with the tone of voice of the app: welcoming, appetising and quality and all other elements have rounded corners. ✅
 
-\*\*\*\* Homepage
+### Homepage
 
 - change the yellow of the star to the brand yellow ✅
 
-\*\*\*\* Create recipe page
+### Create recipe page
 
 - see if an icon or illustration looks better before the page title inline with the title (something food related to add approachability)
 
-\*\*\*\* Recipe page
+### Recipe page
 
 - place the heart icon ✅
 - place the nutrition icon ✅
@@ -39,7 +39,7 @@ tuesday 9th august
 - see if an icon or illustration looks better before the page title inline with the title (something food related to add approachability)
 - position the image centrally and to the top
 
-\*\*\*\* User profile page
+### User profile page
 
 - add navbar to user profile page
 - consult figma design for layout
@@ -73,7 +73,7 @@ When you click the chip "all" in the Categories Component we want to populate th
 - make the opacity of the required lighter ✅
 - align nav hamburger menu icon to left (use material icon for it to get rid of the misalignment)
 
-> > > > sat 13th august
+### sat 13th august
 
 - add cursor: 'pointer' to clickable area of recipe cards ✅
 - change description on recipepage to: Instructions / Method ✅
@@ -83,11 +83,32 @@ When you click the chip "all" in the Categories Component we want to populate th
 - style navbar draw with brand guidelines: give brand colors: ✅ and style the whole thing to look professional ❌
 - change all recipes button to view all ✅
 
-functionality:
+### functionality:
 
 - all recipes button does not get all recipes
   - when all recipies button is clicked the title should change on "featured recipes" to "all recipes" and visa versa so that the user can go back and forth
 - when search input is used, if there are result then display the results, if no results then display there are no search results for that search
 - create recipe does not submit to anywhere
 - if a user searches an there is no result then the page should tell the user no result are found and also redirect to a populated version of the page with featured recipes after a few seconds
+
+- ### Get Chips on homepage working
+
+- in the datafile of recipes add a category to each recipe object with the category name that corresponds to the chip name (Pizza, Burgers ect) ✅
+- add a file in Public called data.json ✅
+- use online converter to turn the javascript file to a json formatted file and paste into data.json ✅
+- because it is now in the public folder check that the data can be received on path: localhost:3000/data.json ✅
+- now we can send a request to url: http://localhost:3000/data.json instead of the other url without categories ✅
+
+- send the fetch request for the data inside getServerSideProps to: http://localhost:3000/data.json and save in a response variable. Make the function async to await the data. ✅
+- get the promise and await the conversion of the data to json format ✅
+- return an object as props for GSSP getServerSideProps return {props: {payload: data}} as the data that comes back is just an array of objects with the name signed as a variable when converted to json. ✅
+- in the functional page Component deconstruct and receive the ({payload}) to make use of it ✅
+- set the payload as the initial value of state so that it is stored to multiuse ✅
+
+- the value of the chips is hardcode but these values need to be stored in the database table and be generated from these. ✅
+- simulate an api on the backend which will be a backend table of categories by creating an array and map over it (this will be instead of hardcoding the chips) ✅
+- create an array called: const categories ✅
+- create a object with a name and emoji keys and transfer the values for each chip ✅
+- map over the categories ✅
+- return one Chip Component per object and for the label access the object.emoji and object.name and include the variant outlined as part of the styling and add sx={{cursor: "pointer"}} to mimick a button that is clickable ((think about hover states also, maybe put a component of Button on it for those features)) ✅
 -
