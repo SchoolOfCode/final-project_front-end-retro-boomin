@@ -76,4 +76,4 @@ When you click the chip "all" in the Categories Component we want to populate th
 > > > > sat 13th august
 
 - add cursor: 'pointer' to clickable area of recipe cards ✅
-- change description on homepage to: Instructions / Method
+- change description on recipepage to: Instructions / Method ✅
