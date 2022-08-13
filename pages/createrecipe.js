@@ -151,9 +151,9 @@ export default function createRecipe() {
               padding: '24px 24px 24px 24px',
               borderRadius: '8px',
 
-              '& label': {
-                opacity: '55%',
-              },
+              // '& label': {
+              //   opacity: '55%',
+              // },
             }}
           >
             <Box>
@@ -169,8 +169,7 @@ export default function createRecipe() {
               <TextField
                 sx={{
                   backgroundColor: '',
-                  borderRadius: '100px',
-                  border: '',
+                  '& > label': { opacity: '55%' },
                 }}
                 variant="outlined"
                 value={newRecipeSubmission.title}
@@ -198,21 +197,33 @@ export default function createRecipe() {
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
+                  backgroundColor: '',
                 }}
               >
-                <Button variant="text" component="label">
-                  + Upload Image
-                  <input
-                    hidden
-                    accept="image/*"
-                    multiple
-                    type="file"
-                    name="image"
-                    onChange={handleImageChange}
-                    value={newImage}
-                  />
-                </Button>
+                <Typography sx={{ opacity: '40%' }}>
+                  Image upload will appear here
+                </Typography>
               </Box>
+              <Button
+                variant="contained"
+                component="label"
+                sx={{
+                  marginTop: '8px',
+                  marginBottom: '24px',
+                  marginLeft: '4px',
+                }}
+              >
+                + Upload Image
+                <input
+                  hidden
+                  accept="image/*"
+                  multiple
+                  type="file"
+                  name="image"
+                  onChange={handleImageChange}
+                  value={newImage}
+                />
+              </Button>
 
               {/* COOKING TIME */}
               <Grid container spacing={3}>
@@ -222,6 +233,9 @@ export default function createRecipe() {
                     sx={{
                       height: '50px',
                       borderRadius: '8px',
+                      '& > div': {
+                        opacity: '55%',
+                      },
                     }}
                     value={newRecipeSubmission.time}
                     onChange={handleChangeFor('time')}
@@ -244,7 +258,11 @@ export default function createRecipe() {
                 <Grid item sm={6} xs={12}>
                   <Typography sx={{ mb: 1, mt: 2 }}>Serves: </Typography>
                   <Select
-                    sx={{ height: '50px', borderRadius: '8px' }}
+                    sx={{
+                      height: '50px',
+                      borderRadius: '8px',
+                      '& > div': { opacity: '55%' },
+                    }}
                     value={newRecipeSubmission.serves}
                     onChange={handleChangeFor('serves')}
                     defaultValue=""
@@ -266,7 +284,11 @@ export default function createRecipe() {
                     Nutrition category:{' '}
                   </Typography>
                   <Select
-                    sx={{ height: '50px', borderRadius: '8px' }}
+                    sx={{
+                      height: '50px',
+                      borderRadius: '8px',
+                      '&  > div': { opacity: '55%' },
+                    }}
                     value={newRecipeSubmission.nutrition}
                     onChange={handleChangeFor('nutrition')}
                     displayEmpty
@@ -286,7 +308,11 @@ export default function createRecipe() {
                 <Grid item sm={6} xs={12}>
                   <Typography sx={{ mb: 1, mt: 2 }}>Price: </Typography>
                   <Select
-                    sx={{ height: '50px', borderRadius: '8px' }}
+                    sx={{
+                      height: '50px',
+                      borderRadius: '8px',
+                      '& > div': { opacity: '55%' },
+                    }}
                     value={newRecipeSubmission.cost}
                     onChange={handleChangeFor('cost')}
                     displayEmpty
@@ -306,7 +332,7 @@ export default function createRecipe() {
               {/* INGREDIENTS */}
               <Typography sx={{ mt: 2, mb: 1 }}>Ingredients</Typography>
               <TextField
-                sx={{ borderRadius: '8px' }}
+                sx={{ borderRadius: '8px', '& > label': { opacity: '55%' } }}
                 variant="outlined"
                 value={newRecipeSubmission.ingredients}
                 onChange={handleChangeFor('ingredients')}
@@ -321,7 +347,7 @@ export default function createRecipe() {
               {/* DESCRIPTION */}
               <Typography sx={{ mb: 1, mt: 2 }}>Description</Typography>
               <TextField
-                sx={{ borderRadius: '8px' }}
+                sx={{ borderRadius: '8px', '& > label': { opacity: '55%' } }}
                 variant="outlined"
                 value={newRecipeSubmission.description}
                 onChange={handleChangeFor('description')}
