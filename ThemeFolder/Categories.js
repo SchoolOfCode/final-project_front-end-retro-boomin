@@ -34,6 +34,10 @@ const Categories = () => {
     },
   ];
 
+  const filterRecipe = (name) => {
+    console.log(name);
+  };
+
   return (
     <>
       <Container
@@ -69,11 +73,14 @@ const Categories = () => {
             },
           }}
         >
-          {categories.map((chip) => {
+          {categories.map(({ name, emoji }) => {
             return (
               <Chip
+                onClick={() => {
+                  filterRecipe(name);
+                }}
                 component="Button"
-                label={`${chip.emoji} ${chip.name}`}
+                label={`${emoji} ${name}`}
                 variant="outlined"
                 sx={{ cursor: 'pointer' }}
               />

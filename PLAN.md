@@ -93,6 +93,8 @@ When you click the chip "all" in the Categories Component we want to populate th
 
 - ### Get Chips on homepage working
 
+#### phase 1
+
 - in the datafile of recipes add a category to each recipe object with the category name that corresponds to the chip name (Pizza, Burgers ect) ✅
 - add a file in Public called data.json ✅
 - use online converter to turn the javascript file to a json formatted file and paste into data.json ✅
@@ -111,4 +113,12 @@ When you click the chip "all" in the Categories Component we want to populate th
 - create a object with a name and emoji keys and transfer the values for each chip ✅
 - map over the categories ✅
 - return one Chip Component per object and for the label access the object.emoji and object.name and include the variant outlined as part of the styling and add sx={{cursor: "pointer"}} to mimick a button that is clickable ((think about hover states also, maybe put a component of Button on it for those features)) ✅
--
+
+#### phase 2
+
+- now that each category has a name, when we click on a category we should filter the recipes
+- create a function const filterRecipes
+- console log the name of the category clicked on to make sure we are getting it
+- add onClick to the Chip Component returned, call the filterRecipes function and pass in the name and receive in the function as argument
+- deconstruct the mapped object into name and emojivariables
+- change the labels on the chips to reflect the deconstruction
