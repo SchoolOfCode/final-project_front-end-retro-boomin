@@ -80,7 +80,7 @@ When you click the chip "all" in the Categories Component we want to populate th
 - if card is in a users profile fav icon should be filled not outlined / or get rid of fav icon ❌
 - change upload image button to under the image upload area on create recipe page ✅
 - place hamburger menu icon central to the navbar ✅
-- style navbar draw with brand guidelines ❌
+- style navbar draw with brand guidelines: give brand colors: ✅ and style the whole thing to look professional ❌
 - change all recipes button to view all ✅
 
 functionality:
