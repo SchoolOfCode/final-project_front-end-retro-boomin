@@ -72,3 +72,8 @@ When you click the chip "all" in the Categories Component we want to populate th
 - place the all button on mobile ✅
 - make the opacity of the required lighter ✅
 - align nav hamburger menu icon to left (use material icon for it to get rid of the misalignment)
+
+> > > > sat 13th august
+
+- add cursor: 'pointer' to clickable area of recipe cards ✅
+- change description on homepage to: Instructions / Method
