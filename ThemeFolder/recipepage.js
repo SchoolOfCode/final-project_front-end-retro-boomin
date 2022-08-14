@@ -82,7 +82,7 @@ export default function RecipeCards({ recipedata, separatedingredients }) {
             variant="h2"
             sx={{ fontWeight: '700', fontSize: '39px' }}
           >
-            {filter.clean({item.title})}
+            {item.title}
           </Typography>
           <Box
             sx={{

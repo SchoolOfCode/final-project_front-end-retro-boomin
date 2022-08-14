@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { Navbar } from '../ThemeFolder/Navbar.js';
+import Footer from '../ThemeFolder/Footer.js';
 import { Container } from '@mui/system';
 import Categories from '../ThemeFolder/Categories';
 import { Hero } from '../ThemeFolder/Hero';
@@ -166,6 +167,7 @@ export default function Home({ payload }) {
           />
         </Container>
       </Hidden>
+      <Footer></Footer>
     </div>
   );
 }
