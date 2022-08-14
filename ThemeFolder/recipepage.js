@@ -24,6 +24,10 @@ export default function RecipeCards({ recipedata, separatedingredients }) {
   const [value, setValue] = useState(0);
   const { user } = useUser();
 
+  // this will filter bad words
+  var Filter = require('bad-words'),
+    filter = new Filter();
+
   // This function receives the id of the recipecard and allows the user to rate it.
   async function handleClick(id) {
     try {
@@ -78,7 +82,7 @@ export default function RecipeCards({ recipedata, separatedingredients }) {
             variant="h2"
             sx={{ fontWeight: '700', fontSize: '39px' }}
           >
-            {item.title}
+            {filter.clean({item.title})}
           </Typography>
           <Box
             sx={{
@@ -239,7 +243,7 @@ export default function RecipeCards({ recipedata, separatedingredients }) {
             {separatedingredients.map((item) => (
               <Grid item>
                 <Chip
-                  label={item}
+                  label={filter.clean(item)}
                   variant="outlined"
                   sx={{
                     borderColor: '#FCC62E',
@@ -275,7 +279,7 @@ export default function RecipeCards({ recipedata, separatedingredients }) {
             placeholder="Add Description"
             mt="8px"
           >
-            {item.description}
+            {filter.clean(item.description)}
           </Typography>
           {/* RATING */}
           <Box
